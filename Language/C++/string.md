@@ -2,9 +2,9 @@
 
 문자열을 다룰 때 유용한 &lt;string&gt; 헤더에 대해 알아보자.
 
-### 주요 메서드
+> 주요 메서드
 
-> Create
+### Create
 
 (1) 생성
 
@@ -37,7 +37,7 @@ cout << s << endl;
 
 <br>
 
-> Read
+### Read
 
 (1) 기본 읽기
 
@@ -67,7 +67,7 @@ cout << noboolalpha; 				// 다시 기본 모드로 돌림
 
 <br>
 
-> Update
+### Update
 
 (1) 삽입 (insert)
 
@@ -111,7 +111,7 @@ t.replace(t.begin(), t.begin()+3, 2, '*');     // "**YZfgh", 마지막 매개변
 
 <br>
 
-> Delete
+### Delete
 
 (1) 부분 삭제 (erase)
 
