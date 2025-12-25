@@ -24,19 +24,19 @@ export default function App() {
 }
 ```
 
-> **@keyframes**
+### **@keyframes**
 
 시간에 따라 어떻게 변화시킬지 "시나리오" 정의
 
-> **animation**
+### **animation**
 
 정의한 keyframes를 **실행**
 
-> **transform**
+### **transform**
 
 요소를 이동(`translate`), 회전(`rotate`), 확대/축소(`scale`) 등으로 **변형**하는 속성
 
-> **transition**
+### **transition**
 
 특정 속성 값이 바뀔 때, 그 변화를 보여주는 방법을 정의
 -> 변화를 일으키는 속성은 아님
