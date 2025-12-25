@@ -1,6 +1,6 @@
 # #include <algorithm\>
 
-1. sort()
+### 1. sort()
 
 (1) 단일 원소 정렬
 
@@ -170,8 +170,9 @@ int main()
 }
 ```
 
-2. binary_search
-   구간 내, 해당 원소의 존재 여부를 반환합니다.
+### 2. binary_search
+
+구간 내, 해당 원소의 존재 여부를 반환한다.
 
 ```cpp
 #include <iostream>
@@ -188,8 +189,9 @@ int main()
 }
 ```
 
-3. lower_bound, upper_bound
-   두 함수의 내부는 이분 탐색 기반으로 구현되어 있으며, 대상 배열은 반드시 오름차순으로 정렬되어 있어야 한다.
+### 3. lower_bound, upper_bound
+
+두 함수의 내부는 이분 탐색 기반으로 구현되어 있으며, 대상 배열은 반드시 오름차순으로 정렬되어 있어야 한다.
 
 ```cpp
 #include <iostream>
@@ -217,7 +219,7 @@ int main()
 }
 ```
 
-4. equal_range
+### 4. equal_range
 
 ```cpp
 #include <iostream>
