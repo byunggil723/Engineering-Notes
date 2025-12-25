@@ -4,8 +4,9 @@
 
 ### 주요 메서드
 
-1. Create
-   (1) 생성
+> Create
+
+(1) 생성
 
 ```cpp
 #include <iostream>
@@ -34,8 +35,11 @@ s.append(t, 1, 3); 	// "Hello World! C++ast", index 1부터 이어지는 3개의
 cout << s << endl;
 ```
 
-2. Read
-   (1) 기본 읽기
+<br>
+
+> Read
+
+(1) 기본 읽기
 
 ```cpp
 string s = "apple";
@@ -61,8 +65,11 @@ cout << bool(string::npos == t.find("sx", 1)) << '\n'; // true
 cout << noboolalpha; 				// 다시 기본 모드로 돌림
 ```
 
-3. Update
-   (1) 삽입 (insert)
+<br>
+
+> Update
+
+(1) 삽입 (insert)
 
 ```cpp
 // index 기반
@@ -102,8 +109,11 @@ t.replace(t.begin()+2, t.begin()+5, "XYZ");    // "abXYZfgh"
 t.replace(t.begin(), t.begin()+3, 2, '*');     // "**YZfgh", 마지막 매개변수의 인자는 반드시 단일 문자
 ```
 
-4. Delete
-   (1) 부분 삭제 (erase)
+<br>
+
+> Delete
+
+(1) 부분 삭제 (erase)
 
 ```cpp
 // index 기반
