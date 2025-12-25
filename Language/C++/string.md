@@ -35,8 +35,6 @@ s.append(t, 1, 3); 	// "Hello World! C++ast", index 1부터 이어지는 3개의
 cout << s << endl;
 ```
 
-<br>
-
 ### Read
 
 (1) 기본 읽기
@@ -64,8 +62,6 @@ cout << t.find("st", 1) << '\n'; 	// 2
 cout << bool(string::npos == t.find("sx", 1)) << '\n'; // true
 cout << noboolalpha; 				// 다시 기본 모드로 돌림
 ```
-
-<br>
 
 ### Update
 
@@ -108,8 +104,6 @@ string t = "abcdefgh";
 t.replace(t.begin()+2, t.begin()+5, "XYZ");    // "abXYZfgh"
 t.replace(t.begin(), t.begin()+3, 2, '*');     // "**YZfgh", 마지막 매개변수의 인자는 반드시 단일 문자
 ```
-
-<br>
 
 ### Delete
 
