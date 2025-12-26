@@ -3,7 +3,7 @@
 ### **버퍼(buffer)**
 
 데이터가 임시 저장되는 메모리 공간을 말한다.
-모든 C++ 스트림은 내부적으로 **stream buffer 객체(std::streambuf)**를 사용한다.
+모든 C++ 스트림은 내부적으로 **stream buffer 객체(std::streambuf)**&#8203;를 사용한다.
 
 이 버퍼 안에는 두 영역이 있다.
 get area (입력 버퍼)
@@ -44,7 +44,7 @@ C++ style
 하지만, ios::sync_with_stdio(false)로 동기화를 끊으면 출력 순서를 보장 받을 수 없게 된다.
 
 입력 버퍼(get area), 출력 버퍼(put area) 라는 말은 논리적 구분(추상적 인터페이스)이다.
-실제 구현은 std::stringbuf 내부에서 **하나의 메모리 블록(문자열)**으로 관리된다.
+실제 구현은 std::stringbuf 내부에서 **하나의 메모리 블록(문자열)**&#8203;으로 관리된다.
 
 차이는 포인터가 따로 있다는 것이다.
 `get pointer (gptr)` → 읽기 위치
@@ -71,54 +71,54 @@ sstream 헤더 안에는 문자열을 대상으로 입출력을 수행할 수 �
 
 1. `istringstream`: 입력 전용 클래스
 
-버퍼에 저장된 문자열 데이터를 `>>` 연산자를 통해 변수에 입력할 수 있다.
-`>>` 연산자는 기본적으로 공백을 무시하고, 공백 단위로 끊어서 토큰을 읽는다.
-입력된 데이터의 타입은 변수 타입에 맞게 자동 변환(캐스팅 X)된다.
+   버퍼에 저장된 문자열 데이터를 `>>` 연산자를 통해 변수에 입력할 수 있다.
+   `>>` 연산자는 기본적으로 공백을 무시하고, 공백 단위로 끊어서 토큰을 읽는다.
+   입력된 데이터의 타입은 변수 타입에 맞게 자동 변환(캐스팅 X)된다.
 
-```cpp
-  std::istringstream iss("123 45");
-  int a, b;
-  iss >> a >> b;   // a = 123, b = 45
+   ```cpp
+     std::istringstream iss("123 45");
+     int a, b;
+     iss >> a >> b;   // a = 123, b = 45
 
-  std::istringstream iss.str("123asdf");
-  int x;
-  string s;
-  iss >> x >> s // x = 123, s = asdf -> 부분 파싱
-```
+     std::istringstream iss.str("123asdf");
+     int x;
+     string s;
+     iss >> x >> s // x = 123, s = asdf -> 부분 파싱
+   ```
 
-\* 공백 종류
-스페이스: `' '`
-탭: `\t`
-개행: `\n`
-캐리지 리턴: `\r`
-수직 탭: `\v`
-폼피드: `\f`
+   \* 공백 종류
+   스페이스: `' '`
+   탭: `\t`
+   개행: `\n`
+   캐리지 리턴: `\r`
+   수직 탭: `\v`
+   폼피드: `\f`
 
-\* 캐스팅: 메모리에 있는 값을 그대로 다른 타입으로 해석
+   \* 캐스팅: 메모리에 있는 값을 그대로 다른 타입으로 해석
 
-```cpp
-  char c = 'A';	// 내부 값: 65
-  int n = c;		// n = 65 (아스키 코드에 따른 정수 변환)
-```
+   ```cpp
+     char c = 'A';	// 내부 값: 65
+     int n = c;		// n = 65 (아스키 코드에 따른 정수 변환)
+   ```
 
 2. `ostringstream`: 출력 전용 클래스
    데이터를 `<<` 연산자를 통해 버퍼에 출력할 수 있다.(공백 포함)
 
-```cpp
-	std::ostringstream oss;
-	oss << 123 << ", " << 45;
-	std::string s = oss.str();	// "123, 45"
-```
+   ```cpp
+     std::ostringstream oss;
+     oss << 123 << ", " << 45;
+     std::string s = oss.str();	// "123, 45"
+   ```
 
 3. `stringstream`: 입출력 겸용 클래스
    문자열 데이터를 버퍼로부터 입력할 수도, 버퍼에 출력할 수도 있다.
 
-```cpp
-	std::stringstream ss;
-	ss << "100 200";
-	int x, y;
-	ss >> x >> y;	// x = 100, y = 200
-```
+   ```cpp
+     std::stringstream ss;
+     ss << "100 200";
+     int x, y;
+     ss >> x >> y;	// x = 100, y = 200
+   ```
 
 <br>
 
@@ -174,10 +174,10 @@ int main() {
 
 스트림 객체(istream, ostream, stringstream, fstream …)에는 다음의 4가지 상태 플래그가 있다.
 
-**goodbit**: 오류 없음 (정상 상태) - 초기 상태 혹은 오류를 clear()로 지운 후
-**eofbit**: 입력이 끝에 도달 - 파일 끝까지 읽었거나 stringstream 끝까지 읽음
-**failbit**: 연산 실패(형 변환 불가 등) - "abc"를 int로 읽으려 할 때
-**badbit**: 심각한 오류 (스트림 자체 손상) - 입출력 장치 문제, 버퍼 자체 에러 등
+**goodbit**: 오류 없음 (정상 상태) - 초기 상태 혹은 오류를 clear()로 지운 후<br>
+**eofbit**: 입력이 끝에 도달 - 파일 끝까지 읽었거나 stringstream 끝까지 읽음<br>
+**failbit**: 연산 실패(형 변환 불가 등) - "abc"를 int로 읽으려 할 때<br>
+**badbit**: 심각한 오류 (스트림 자체 손상) - 입출력 장치 문제, 버퍼 자체 에러 등<br>
 
 <예시 코드>
 

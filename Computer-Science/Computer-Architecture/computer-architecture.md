@@ -130,10 +130,10 @@ int main(void) {
   401149:  c3                      ret
 ```
 
-`0x401130`, `0x401145` 는 **가상 주소(Virtual Address)**이다.
+`0x401130`, `0x401145` 는 **가상 주소(Virtual Address)**&#8203;이다.
 프로그램이 실행될 때, 운영체제는 ELF 파일의 각 섹션(.text, .data, .bss 등)을
 ELF 헤더에 명시된 기준 주소(base address, 예: 0x400000)를 기반으로
 프로세스마다 독립된 가상 메모리 공간(Virtual Address Space)에 매핑(mapping) 한다.
-이후 CPU는 **MMU(Memory Management Unit)**라는 하드웨어 장치를 통해
+이후 CPU는 **MMU(Memory Management Unit)**&#8203;라는 하드웨어 장치를 통해
 프로그램이 사용하는 가상 주소(Virtual Address)를 실제 물리 주소(Physical Address)로 변환하여 접근한다.
 이때 변환에 필요한 정보는 운영체제가 관리하는 페이지 테이블(Page Table)이라는 자료구조에 저장되어 있다.
