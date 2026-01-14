@@ -269,13 +269,13 @@ TLS 핸드셰이크는 보통 커널이 아니라 브라우저(사용자 공간)
 유선(이더넷 링크)로 보낼 때:<br>
 
 ```
-[Ethernet Header | IP Header | TCP/UDP | Data | FCS]
+[Ethernet Header | IP Header | TCP/UDP Header | TCP/UDP Payload(= Data) | FCS]
 ```
 
 무선(와이파이 링크)로 보낼 때:<br>
 
 ```
-[802.11 Header | IP Header | TCP/UDP | Data | (무선 FCS)]
+[802.11 Header | IP Header | TCP/UDP Header | TCP/UDP Payload(= Data) | (무선 FCS)]
 ```
 
 #### 7. 물리 계층 (L1)
