@@ -1,6 +1,4 @@
-# 근거리 통신 기술
-
-### 근거리 통신 프로토콜
+# MAC(Medium Access Control, L2 Protocol)
 
 1\) CSMA (Carrier Sense Multiple Access)
 
