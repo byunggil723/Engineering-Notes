@@ -11,3 +11,4 @@
 
 \- [BOJ 1717 집합의 표현](/Algorithm/BOJ/1717.md) : 유니온-파인드 알고리즘을 활용하는 대표 문제<br>
 \- [BOJ 1976 여행 가자](/Algorithm/BOJ/1976.md)<br>
+\- [BOJ 4195 친구 네트워크](/Algorithm/BOJ/4195.md)<br>
