@@ -44,7 +44,7 @@ IPv6에서 어떤 패킷이 MSS를 넘게 되면, 라우터는 해당 패킷을 
 
 \* 로컬 링크: 내 PC(호스트) ↔ 기본 게이트웨이(첫 라우터) 사이의 링크<br> \* $MSS = MTU − (IPv4 Header+TCP Header)$
 
-### 서브넷 마스크(Subnet Mask) & 서브네팅(subnetting)
+### 서브넷 마스크(Subnet Mask) & 서브네팅(Subnetting)
 
 현재 인터넷의 기원은 미국 국방부 산하 고등연구계획국(DARPA)이 주도한 ARPANET 프로젝트로, 군·연구기관 간 통신을 목적으로 1969년에 구축된 초창기 패킷 교환 네트워크다.
 
