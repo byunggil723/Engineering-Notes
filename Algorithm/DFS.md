@@ -1,4 +1,4 @@
-# DFS
+# 깊이 우선 탐색(Depth First Search)
 
 ### 시간 복잡도
 
