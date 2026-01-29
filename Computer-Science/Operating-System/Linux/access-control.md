@@ -134,6 +134,71 @@ chmod o=r file.txt
 chmod a+rx dir/
 ```
 
+상황에 따라 특수 권한을 부여해야 하는 경우가 존재한다.<br>
+일반 사용자가 특정 파일을 실행할 때, 해당 파일이 root 권한으로 실행되어야만 커널이 허용하는 접근 범위가 확장되어 정상적인 동작이 가능한 경우가 이에 해당한다.
+
+1\) setuid (Set User ID)
+
+실행 시 프로세스의 UID를 파일 소유자의 UID로 설정
+
+```bash
+touch test.txt
+chmod 755 test.txt
+ls -l test.txt
+
+# 실행 결과
+-rwxr-xr-x 1 user user 0 Feb  1 12:00 test.txt
+
+chmod u+s test.txt # setuid 설정
+ls -l test.txt
+
+# 실행 결과
+-rwsr-xr-x 1 user user 0 Feb  1 12:01 test.txt
+```
+
+2\) setgid (Set Group ID)
+
+실행 시 프로세스의 GID를 파일 소유자의 GID로 설정
+
+```bash
+touch test.txt
+chmod 755 test.txt
+ls -l test.txt
+
+# 실행 결과
+-rwxr-xr-x 1 user dev 0 Feb  1 12:00 test.txt
+
+chmod g+s test.txt
+ls -l test.txt
+
+# 실행 결과
+-rwxr-sr-x 1 user dev 0 Feb  1 12:02 test.txt
+```
+
+\* setuid와 setgid는 해당 위치의 실행 비트가 `x`로 설정되어 있을 때에만 의미 있게 동작하며,<br>
+실행 비트 `x`가 없는 파일 또는 디렉터리에 특수 권한 비트만 설정한 경우에는 대문자 `S`로 표시되어 특수 권한 설정이 적용되지 않는다.
+
+3\) sticky bit
+
+sticky bit가 설정된 디렉터리 내에서는 생성자 외 사용자도 `rwx` 권한을 모두 가질 수 있으나,<br>
+삭제(`rm`) 및 이름 변경/이동(`mv`)은 해당 파일/디렉터리 소유자와 sticky bit 디렉터리 소유자만 수행할 수 있다.
+
+```bash
+ls -l shared_dir
+
+# 실행 결과
+drwxrwxr-x  2 user dev  Feb  1 12:00 shared_dir
+
+chmod +t shared_dir
+ls -ld shared_dir
+
+# 실행 결과
+drwxrwxrwt  2 user dev  Feb  1 12:02 shared_dir
+```
+
+\* sticky bit는 other 위치의 실행 비트 `x`로 설정되어 있을 때에만 `t`로 표시되며,<br>
+실행 비트 없이 설정된 경우에는 `T`로 표시되어 특수 권한 설정이 적용되지 않는다.
+
 #### 3. `chown` (change owner)
 
 소유자 변경
