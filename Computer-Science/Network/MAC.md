@@ -1,4 +1,4 @@
-# MAC(Medium Access Control, L2 Protocol)
+# MAC(Media Access Control, L2 Protocol)
 
 1\) CSMA (Carrier Sense Multiple Access)
 
