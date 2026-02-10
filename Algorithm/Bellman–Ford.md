@@ -36,7 +36,7 @@ bool is_cycle = false;
 
 void search(int start_node)
 {
-  // 시작 노드를 0으로 설정
+  // 시작 노드까지 거리를 0으로 설정
   cost[start_node] = 0;
 
   for (int i = 0; i < V - 1; i++)
