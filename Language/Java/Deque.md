@@ -1,0 +1,40 @@
+# Deque
+
+Deque는 양쪽 끝(front, rear)에서 삽입과 삭제가 가능한 인터페이스이다.<br>
+ArrayDeque 구현체를 통해 구현되며, Queue(FIFO)와 Stack(LIFO)을 모두 구현할 수 있다.
+
+### Queue (Deque 기반 구현)
+
+```Java
+import java.util.*;
+
+Deque<Integer> q = new ArrayDeque<>();
+// Deque를 사용하여 Queue(FIFO) 구현
+
+q.offerLast(1);   // 삽입 (뒤에 추가)
+q.offerLast(2);
+
+q.pollFirst();    // 가장 앞(가장 먼저 들어온 데이터)에 있는 값을 꺼냄 (없으면 null → 예외 발생 X)
+q.peekFirst();    // 가장 앞에 있는 값을 꺼내지 않고 조회 → 1
+
+q.isEmpty();
+q.size();
+```
+
+### Stack (Deque 기반 구현)
+
+```Java
+import java.util.*;
+
+Deque<Integer> st = new ArrayDeque<>();
+// Deque를 사용하여 Stack(LIFO) 구현
+
+st.push(1);   // 삽입 (앞에 추가)
+st.push(2);
+
+st.pop();     // 가장 위에 있는 값을 제거하고 반환 (없으면 예외 발생)
+st.peek();    // 가장 위에 있는 값을 제거하지 않고 반환 → 2
+
+st.isEmpty();
+st.size();
+```
