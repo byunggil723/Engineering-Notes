@@ -1,0 +1,216 @@
+{
+  "main": {
+    "id": "dd443f41f7d5f311",
+    "type": "split",
+    "children": [
+      {
+        "id": "12d5ae0fcae6aa36",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4cbb837dca0a0f3e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Infrastructure/Linux/access-control.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "access-control"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "446395eea486cd3f",
+    "type": "split",
+    "children": [
+      {
+        "id": "15540d7470555411",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "010b2d72c8c2f9a5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "97c7c48165a6c47e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "e87aea76af312a45",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c9c96ebea4a24c10",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3be95d7512186c7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c02aab1b188534b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "백링크"
+            }
+          },
+          {
+            "id": "855c5196f9cae8ad",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "나가는 링크"
+            }
+          },
+          {
+            "id": "16b13f38f1c6fdde",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "e2d7607401551991",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "모든 속성"
+            }
+          },
+          {
+            "id": "556a9c5c29aa27dd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false,
+      "obsidian-git:Open Git source control": false,
+      "terminal:Open terminal": false
+    }
+  },
+  "active": "4cbb837dca0a0f3e",
+  "lastOpenFiles": [
+    "Infrastructure/Linux/file-system.md",
+    "Computer-Science/Operating-System/operating-system.md",
+    "Language/C++/algorithm.md",
+    "Infrastructure/Linux/access-control.md",
+    "Infrastructure/Linux/account-management.md",
+    "Web-Technology/Frontend/React/life-cycle.md",
+    "Web-Technology/Fundamentals/browser-frame-rendering-cycle.md",
+    "Web-Technology/Fundamentals/browser.md",
+    "Web-Technology/Frontend/React/history.md",
+    "Mobile-Technology/Fundamentals/react-native-execution-model.md",
+    "Computer-Science/Network/07.DNS.md",
+    "Computer-Science/Network/04.IPv4.md",
+    "Computer-Science/Network/02.OSI-7-Layer.md",
+    "Computer-Science/Network/01.Network-Overview.md",
+    "Computer-Science/Fundamentals/data-representation.md",
+    "Computer-Science/Fundamentals/complements.md",
+    "Computer-Science/Fundamentals/address-spacing-by-type-size.md",
+    "Computer-Science/Computer-Architecture/computer-architecture.md",
+    "README.md",
+    "무제.base",
+    "Language/Java/00.java-overview.md",
+    "무제.canvas",
+    "무제 1.canvas",
+    "Algorithm/BOJ/1197.md",
+    "Algorithm/16.Kruskal.md",
+    "Algorithm/14.Union-Find.md",
+    "2026-06-02.md",
+    "Algorithm/01.Big-O.md"
+  ]
+}
