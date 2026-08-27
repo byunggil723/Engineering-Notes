@@ -17,6 +17,7 @@ public class JavaCheatSheet {
 
     // 아스키 코드
     System.out.println("# 아스키 코드");
+    System.out.println();
 
     int x;
 
@@ -43,10 +44,13 @@ public class JavaCheatSheet {
     c = '7';
     System.out.println(c - '0' + 10); // 17
 
+    System.out.println();
     System.out.println("-----------------------------------------------");
+    System.out.println();
 
     // 문자, 문자열 비교
     System.out.println("# 문자, 문자열 비교");
+    System.out.println();
 
     char a = 'B';
     String s1 = "ABC";
@@ -58,13 +62,17 @@ public class JavaCheatSheet {
     if (s1.equals(s2))
       System.out.println("Same!"); // Same!
 
+    System.out.println();
     System.out.println("-----------------------------------------------");
+    System.out.println();
 
     // 문자열 조작
     System.out.println("# 문자열 조작");
+    System.out.println();
 
     // 1) trim
     System.out.println("1) trim");
+    System.out.println();
 
     String s = "   hello world   ";
     System.out.println(s);
@@ -74,6 +82,7 @@ public class JavaCheatSheet {
 
     // 2) split
     System.out.println("2) split");
+    System.out.println();
 
     s = "[a, b, c, d]";
     String substr = s.substring(1, s.length() - 1); // a, b, c, d
@@ -109,6 +118,7 @@ public class JavaCheatSheet {
 
     // 3) StringBuilder, 문자열 조립
     System.out.println("3) StringBuilder, 문자열 조립");
+    System.out.println();
 
     StringBuilder sb = new StringBuilder("");
 
@@ -134,25 +144,66 @@ public class JavaCheatSheet {
     s = sb.toString();
     System.out.println("result: " + s);
 
+    System.out.println();
     System.out.println("-----------------------------------------------");
+    System.out.println();
+
+    // 문자열 정렬
+    System.out.println("# 문자열 정렬");
+    System.out.println();
+
+    List<String> dict = new ArrayList<>(List.of("banana", "apple", "carrot"));
+
+    dict.sort((str1, str2) -> str1.compareTo(str2)); // 오름차순
+    System.out.println(dict);
+
+    dict.sort((str1, str2) -> str2.compareTo(str1)); // 내림차순
+    System.out.println(dict);
+
+    System.out.println();
+    System.out.println("-----------------------------------------------");
+    System.out.println();
+
+    // 문자 <-> 문자열 변환
+    System.out.println("# 문자 <-> 문자열 변환");
+    System.out.println();
+
+    // char -> String
+    char ch = 'A';
+    String str_A = Character.toString(c); // "A"
+
+    // String -> char
+    String str = "ABC";
+    char c_A = s.charAt(0); // 'A'
+
+    System.out.println();
+    System.out.println("-----------------------------------------------");
+    System.out.println();
 
     // 배열 출력
     System.out.println("# 배열 출력");
+    System.out.println();
 
     // 1) primitive 배열 (1차원)
     System.out.println("1) primitive 배열 (1차원)");
+    System.out.println();
+
     int[] arr = new int[] { 2, 4, 3, 1, 5 };
     System.out.println(Arrays.toString(arr)); // [2, 4, 3, 1, 5]
     System.out.println();
 
     // 2) primitive 배열 (2차원 이상)
     System.out.println("2) primitive 배열 (2차원 이상)");
+    System.out.println();
+
     int[][] arr2 = new int[][] { { 2, 4 }, { 3, 1, 5 } };
     System.out.println(Arrays.deepToString(arr2));
     System.out.println();
 
     // 3) Collection (1차원)
     System.out.println("3) Collection (1차원)");
+    System.out.println();
+
     List<Integer> l = new ArrayList<>(List.of(3, 2, 4, 1, 5));
 
     /*
@@ -171,6 +222,8 @@ public class JavaCheatSheet {
 
     // 4) Collection (2차원 이상)
     System.out.println("4) Collection (2차원 이상)");
+    System.out.println();
+
     List<List<Integer>> l2 = new ArrayList<>();
 
     l2.add(new ArrayList<>(List.of(1, 2, 3)));
@@ -180,13 +233,17 @@ public class JavaCheatSheet {
     System.out.println(l2);
     System.out.println();
 
+    System.out.println();
     System.out.println("-----------------------------------------------");
+    System.out.println();
 
     // 정렬
     System.out.println("# 정렬");
+    System.out.println();
 
     // 1) primitive 배열 (내림차순 불가)
     System.out.println("1) primitive 배열 (내림차순 불가)");
+    System.out.println();
 
     arr = new int[] { 2, 4, 3, 1, 5 };
 
@@ -196,6 +253,8 @@ public class JavaCheatSheet {
 
     // 2) Collection
     System.out.println("2) Collection");
+    System.out.println();
+
     l = new ArrayList<>(List.of(2, 4, 3, 1, 5));
 
     l.sort((e1, e2) -> {
@@ -206,6 +265,8 @@ public class JavaCheatSheet {
 
     // 3) Collection (Pair)
     System.out.println("3) Collection (Pair)");
+    System.out.println();
+
     List<Pair> l3 = new ArrayList<>();
     l3 = new ArrayList<>(
         List.of(
@@ -225,10 +286,13 @@ public class JavaCheatSheet {
       System.out.println(l3.get(i).x + " " + l3.get(i).y);
     }
 
+    System.out.println();
     System.out.println("-----------------------------------------------");
+    System.out.println();
 
     // 스택, 큐, 덱
     System.out.println("# 스택, 큐, 덱");
+    System.out.println();
 
     // 1) 스택
     Deque<Integer> stack = new ArrayDeque<>();
