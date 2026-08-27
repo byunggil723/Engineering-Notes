@@ -233,6 +233,7 @@ public class JavaCheatSheet {
     // 1) 스택
     Deque<Integer> stack = new ArrayDeque<>();
 
+    System.out.print("스택: ");
     for (int i = 0; i < 10; i++) {
       stack.offerFirst(i);
     }
@@ -249,10 +250,12 @@ public class JavaCheatSheet {
     }
     System.out.println();
 
-    System.out.println(stack.poll());
-    System.out.println(stack.peek());
+    System.out.println("poll: " + stack.poll());
+    System.out.println("peek: " + stack.peek());
+    System.out.println();
 
     // 2) 큐
+    System.out.print("큐: ");
     Deque<Integer> queue = new ArrayDeque<>();
 
     for (int i = 0; i < 10; i++) {
@@ -271,17 +274,19 @@ public class JavaCheatSheet {
     }
     System.out.println();
 
-    System.out.println(queue.poll());
-    System.out.println(queue.peek());
+    System.out.println("poll: " + queue.poll());
+    System.out.println("peek: " + queue.peek());
+    System.out.println();
 
     // 3) 덱
+    System.out.print("덱: ");
     Deque<Integer> deque = new ArrayDeque<>();
 
     for (int i = 0; i < 10; i++) {
       deque.offerFirst(i);
     }
     for (int i = 0; i < 10; i++) {
-      deque.offerLast(i);
+      deque.offerLast(-1 * i);
     }
 
     it = deque.iterator();
@@ -296,6 +301,14 @@ public class JavaCheatSheet {
 
       System.out.print(cur_v + " ");
     }
+
     System.out.println();
+    System.out.println("pollFirst: " + deque.pollFirst());
+    System.out.println("peekFirst: " + deque.peekFirst());
+    System.out.println("pollLast: " + deque.pollLast());
+    System.out.println("peekLast: " + deque.peekLast());
+    System.out.println();
+
+    System.out.println("-----------------------------------------------");
   }
 }
