@@ -11,9 +11,97 @@ class Pair {
 }
 
 public class JavaCheatSheet {
+  static int n, m;
+  static boolean[] visited;
+  static List<Integer> selected;
+
+  // 순열
+  static void perm(int depth) {
+    if (depth == m) {
+
+      for (int i = 0; i < selected.size(); i++) {
+        System.out.print(selected.get(i) + " ");
+      }
+      System.out.println();
+
+      return;
+    }
+
+    for (int i = 1; i <= n; i++) {
+
+      if (visited[i])
+        continue;
+
+      visited[i] = true;
+      selected.add(i);
+
+      perm(depth + 1);
+
+      selected.remove(selected.size() - 1);
+      visited[i] = false;
+    }
+  }
+
+  // 조합
+  static void comb(int depth, int start_point) {
+    if (depth == m) {
+
+      for (int i = 0; i < selected.size(); i++) {
+        System.out.print(selected.get(i) + " ");
+      }
+      System.out.println();
+
+      return;
+    }
+
+    for (int i = start_point; i <= n; i++) {
+      selected.add(i);
+      comb(depth + 1, i + 1);
+      selected.remove(selected.size() - 1);
+    }
+  }
+
+  // 중복 순열
+  static void rep_perm(int depth) {
+    if (depth == m) {
+
+      for (int i = 0; i < selected.size(); i++) {
+        System.out.print(selected.get(i) + " ");
+      }
+      System.out.println();
+
+      return;
+    }
+
+    for (int i = 1; i <= n; i++) {
+      selected.add(i);
+      rep_perm(depth + 1);
+      selected.remove(selected.size() - 1);
+    }
+  }
+
+  // 중복 조합
+  static void rep_comb(int depth, int start_point) {
+    if (depth == m) {
+
+      for (int i = 0; i < selected.size(); i++) {
+        System.out.print(selected.get(i) + " ");
+      }
+      System.out.println();
+
+      return;
+    }
+
+    for (int i = start_point; i <= n; i++) {
+      selected.add(i);
+      rep_comb(depth + 1, i);
+      selected.remove(selected.size() - 1);
+    }
+  }
+
   public static void main(String[] args) throws Exception {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    StringTokenizer st = new StringTokenizer(br.readLine());
+    StringTokenizer st;
 
     // 아스키 코드
     System.out.println("# 아스키 코드");
@@ -371,8 +459,84 @@ public class JavaCheatSheet {
     System.out.println("peekFirst: " + deque.peekFirst());
     System.out.println("pollLast: " + deque.pollLast());
     System.out.println("peekLast: " + deque.peekLast());
+
+    System.out.println();
+    System.out.println("-----------------------------------------------");
     System.out.println();
 
+    System.out.print("n 입력: ");
+    n = Integer.parseInt(br.readLine());
+
+    System.out.print("m 입력: ");
+    m = Integer.parseInt(br.readLine());
+
+    System.out.println();
+
+    // 순열
+    System.out.println("[순열]");
+    System.out.println();
+
+    visited = new boolean[n + 1];
+    selected = new ArrayList<>();
+    for (int i = 0; i <= n; i++) {
+      visited[i] = false;
+    }
+
+    perm(0);
+
+    System.out.println();
     System.out.println("-----------------------------------------------");
+    System.out.println();
+
+    // 조합
+
+    System.out.println("[조합]");
+    System.out.println();
+
+    visited = new boolean[n + 1];
+    selected = new ArrayList<>();
+    for (int i = 0; i <= n; i++) {
+      visited[i] = false;
+    }
+
+    comb(0, 1);
+
+    System.out.println();
+    System.out.println("-----------------------------------------------");
+    System.out.println();
+
+    // 중복 순열
+
+    System.out.println("[중복 순열]");
+    System.out.println();
+
+    visited = new boolean[n + 1];
+    selected = new ArrayList<>();
+    for (int i = 0; i <= n; i++) {
+      visited[i] = false;
+    }
+
+    rep_perm(0);
+
+    System.out.println();
+    System.out.println("-----------------------------------------------");
+    System.out.println();
+
+    // 중복 조합
+
+    System.out.println("[중복 조합]");
+    System.out.println();
+
+    visited = new boolean[n + 1];
+    selected = new ArrayList<>();
+    for (int i = 0; i <= n; i++) {
+      visited[i] = false;
+    }
+
+    rep_comb(0, 1);
+
+    System.out.println();
+    System.out.println("-----------------------------------------------");
+    System.out.println();
   }
 }
